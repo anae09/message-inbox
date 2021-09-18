@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "6145ce16700fb219fb203f06"
+  },
+  "username": "john_lennon",
+  "password": "123"
+},{
+  "_id": {
+    "$oid": "6145cf02700fb219fb203f07"
+  },
+  "username": "paul_mccartney",
+  "password": "123"
+},{
+  "_id": {
+    "$oid": "6145cf02700fb219fb203f08"
+  },
+  "username": "ringo_starrr",
+  "password": "123"
+},{
+  "_id": {
+    "$oid": "6145cf02700fb219fb203f09"
+  },
+  "username": "george_harrison",
+  "password": "123"
+},{
+  "_id": {
+    "$oid": "6145cf02700fb219fb203f0a"
+  },
+  "username": "yoko_ono",
+  "password": "123"
+}]

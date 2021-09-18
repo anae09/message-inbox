@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "6145cfe769e20d27ae9b518e"
+  },
+  "threadId": "6145cfc069e20d27ae9b518d",
+  "sender": "john_lennon",
+  "receiver": "paul_mccartney",
+  "timestamp": {
+    "$date": "2021-09-18T11:39:19.671Z"
+  },
+  "body": "Lucy in the Sky with Diamonds"
+},{
+  "_id": {
+    "$oid": "6145d20d69e20d27ae9b518f"
+  },
+  "threadId": "6145cfc069e20d27ae9b518d",
+  "sender": "paul_mccartney",
+  "receiver": "john_lennon",
+  "timestamp": {
+    "$date": "2021-09-18T11:48:29.751Z"
+  },
+  "body": "She's Leaving Home"
+},{
+  "_id": {
+    "$oid": "6145d2d910d23b5b5c464154"
+  },
+  "threadId": "6145d2a010d23b5b5c464153",
+  "sender": "paul_mccartney",
+  "receiver": "ringo_starrr",
+  "timestamp": {
+    "$date": "2021-09-18T11:51:53.531Z"
+  },
+  "body": "Come Together"
+}]

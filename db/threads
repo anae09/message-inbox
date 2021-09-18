@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6145cfc069e20d27ae9b518d"
+  },
+  "participants": [
+    "john_lennon",
+    "paul_mccartney"
+  ],
+  "title": "Sgt. Pepper's Lonely Hearts Club Band"
+},{
+  "_id": {
+    "$oid": "6145d2a010d23b5b5c464153"
+  },
+  "participants": [
+    "paul_mccartney",
+    "ringo_starrr"
+  ],
+  "title": "Abbey Road "
+}]
