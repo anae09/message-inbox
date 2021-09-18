@@ -1,0 +1,68 @@
+<div class="header">
+  <button mat-stroked-button color="primary" (click)='logout()'>LOGOUT</button>
+</div>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Inbox</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p *ngIf="userThreads.length == 0">No threads.</p>
+    <mat-accordion>
+      <mat-expansion-panel
+        *ngFor="let thread of userThreads"
+        (opened)="openPanel(thread._id)"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ thread.title }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list role="list">
+          <mat-list-item role="listitem" *ngFor="let mssg of messages">{{ mssg.sender }}: {{ mssg.body }}</mat-list-item>
+        </mat-list>
+        <p *ngIf="messages.length == 0">No messages.</p>
+        <form (submit)='sendMessage(inboxForm, thread)' #inboxForm='ngForm'>
+          <mat-form-field appearance="fill">
+            <input matInput type="text" name='body' ngModel
+              required  #body='ngModel' placeholder="Enter message here..."/>
+            <mat-error *ngIf='body.invalid'>Field required.</mat-error>
+          </mat-form-field>
+          <div class="btn-box">
+            <button mat-raised-button color="primary" type='submit'>
+              SEND
+            </button>
+          </div>
+        </form>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+</mat-card>
+<div class="spacer"></div>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create Thread</mat-card-title>
+  </mat-card-header>
+  <form (submit)='onAddPost(postForm)' #postForm='ngForm'>
+    <mat-form-field appearance="fill">
+      <mat-label>Select user...</mat-label>
+      <mat-select ngModel #user='ngModel' name="user">
+        <mat-option *ngFor="let user of users" [value]="user.username">
+          {{user.username}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput type="text" name='title' ngModel
+        required minlength="3" #title='ngModel' placeholder="Thread Title"/>
+      <mat-error *ngIf='title.invalid'>Enter a thread title</mat-error>
+    </mat-form-field>
+    <div class="btn-box">
+      <button mat-raised-button color="primary" type='submit'>
+        CREATE
+      </button>
+    </div>
+  </form>
+</mat-card>
+<div class="spacer"></div>

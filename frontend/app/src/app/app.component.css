@@ -1,0 +1,38 @@
+.left-side {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-image: url("../assets/triangles-1430105_1280.png");
+}
+
+.right-side {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-image: url("../assets/triangles-1430105_1280.png");
+}
+main {
+  width: 40%;
+  margin: 50px auto;
+  background-color: white;
+}
+
+@media only screen and (max-width: 750px) {
+  main {
+    width: 80%;
+    margin: 50px auto;
+  }
+  .left-side, .right-side {
+    display: none;
+  }
+}

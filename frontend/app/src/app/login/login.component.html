@@ -1,0 +1,29 @@
+<mat-card>
+  <h2>Login</h2>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="username"
+        placeholder="Username"
+        [(ngModel)]="username"
+        required
+      />
+      <mat-error>Field required.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        name="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+        required
+      />
+      <mat-error>Field required.</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="login()">LOGIN</button>
+  </form>
+  <p class="message">{{message}}</p>
+</mat-card>

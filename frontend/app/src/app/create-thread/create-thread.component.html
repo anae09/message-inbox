@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create Thread</mat-card-title>
+  </mat-card-header>
+  <form (submit)='onAddPost(postForm)' #postForm='ngForm'>
+    <mat-form-field appearance="fill">
+      <mat-label>Select user...</mat-label>
+      <mat-select ngModel #user='ngModel' name="user">
+        <mat-option *ngFor="let user of users" [value]="user.username">
+          {{user.username}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput type="text" name='title' ngModel
+        required minlength="3" #title='ngModel' placeholder="Thread Title"/>
+      <mat-error *ngIf='title.invalid'>Enter a thread title</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type='submit'>
+      CREATE
+    </button>
+  </form>
+</mat-card>
