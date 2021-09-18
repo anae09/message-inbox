@@ -29,7 +29,7 @@ ng serve --open
 <br>
 Use test data to login:<br>
 username: john_lennon<br>
-password: 123<br>
+password: 123<br><br>
 
 ![login-page](https://user-images.githubusercontent.com/79768470/133889890-83898e1d-dfbc-44e4-9b85-4a14cd42a75a.png)<br><br>
 ![inbox-page](https://user-images.githubusercontent.com/79768470/133889902-7145a273-59ac-4680-96dc-af3ec2f12d80.png)<br><br>
